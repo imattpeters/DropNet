@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DADD2EA2-F833-4839-93DE-4A69CBEC7D35}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>DropNet</RootNamespace>
+    <AssemblyName>DropNet.MonoDroid</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <AndroidSupportedAbis>armeabi</AndroidSupportedAbis>
+    <AndroidStoreUncompressedFileExtensions />
+    <MandroidI18n />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;MONODROID;FRAMEWORK</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;MONODROID;FRAMEWORK</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\DropNet\Authenticators\OAuthAuthenticator.cs">
+      <Link>Authenticators\OAuthAuthenticator.cs</Link>
+    </Compile>
+    <Compile Include="..\DropNet\Client\Client.cs">
+      <Link>Client\Client.cs</Link>
+    </Compile>
+    <Compile Include="..\DropNet\Client\Files.Async.cs">
+      <Link>Client\Files.Async.cs</Link>
+    </Compile>
+    <Compile Include="..\DropNet\Client\Files.Sync.cs">
+      <Link>Client\Files.Sync.cs</Link>
+    </Compile>
+    <Compile Include="..\DropNet\Client\Files.Task.cs">
+      <Link>Client\Files.Task.cs</Link>
+    </Compile>
+    <Compile Include="..\DropNet\Client\User.Async.cs">
+      <Link>Client\User.Async.cs</Link>
+    </Compile>
+    <Compile Include="..\DropNet\Client\User.Sync.cs">
+      <Link>Client\User.Sync.cs</Link>
+    </Compile>
+    <Compile Include="..\DropNet\Exceptions\DropboxException.cs">
+      <Link>Exceptions\DropboxException.cs</Link>
+    </Compile>
+    <Compile Include="..\DropNet\Extensions\RestClientExtensions.cs">
+      <Link>Extensions\RestClientExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\DropNet\Extensions\StringExtensions.cs">
+      <Link>Extensions\StringExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\DropNet\Helpers\RequestHelper.cs">
+      <Link>Helpers\RequestHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\DropNet\Models\AccountCreationResult.cs">
+      <Link>Models\AccountCreationResult.cs</Link>
+    </Compile>
+    <Compile Include="..\DropNet\Models\AccountInfo.cs">
+      <Link>Models\AccountInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\DropNet\Models\DeltaPage.cs">
+      <Link>Models\DeltaPage.cs</Link>
+    </Compile>
+    <Compile Include="..\DropNet\Models\MetaData.cs">
+      <Link>Models\MetaData.cs</Link>
+    </Compile>
+    <Compile Include="..\DropNet\Models\SharesResponse.cs">
+      <Link>Models\SharesResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\DropNet\Models\ThumbnailSize.cs">
+      <Link>Models\ThumbnailSize.cs</Link>
+    </Compile>
+    <Compile Include="..\DropNet\Models\UserLogin.cs">
+      <Link>Models\UserLogin.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\DropNet\App.config">
+      <Link>App.config</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\RestSharp\RestSharp.MonoDroid\RestSharp.MonoDroid.csproj">
+      <Project>{1b662c38-984f-4b6a-89b5-aff7fcbe43a2}</Project>
+      <Name>RestSharp.MonoDroid</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
