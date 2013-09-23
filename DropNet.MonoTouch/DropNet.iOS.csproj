@@ -89,7 +89,12 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\..\RestSharp\RestSharp.MonoTouch\RestSharp.iOS.csproj">
+      <Project>{0326eaca-6c7c-448f-b1e3-3d501944442b}</Project>
+      <Name>RestSharp.iOS</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
