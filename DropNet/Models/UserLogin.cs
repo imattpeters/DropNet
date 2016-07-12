@@ -1,4 +1,4 @@
-﻿namespace DropNet.Models
+namespace DropNet.Models
 {
     public class UserLogin
     {
