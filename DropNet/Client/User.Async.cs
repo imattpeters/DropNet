@@ -1,4 +1,4 @@
-﻿using DropNet.Models;
+using DropNet.Models;
 using RestSharp;
 using System;
 using DropNet.Authenticators;

@@ -1,4 +1,4 @@
-﻿#if !WINDOWS_PHONE
+#if !WINDOWS_PHONE
 
 using DropNet.Models;
 using RestSharp;
